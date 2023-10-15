@@ -868,10 +868,10 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
     drawString(xPos0 - 8, yTick + 4, dataStr, RIGHT, ACCENT_COLOR);
 
     // PoP
-    dataStr = String(100 - (i * 20));
+    dataStr = String(2.5 - (i * 0.5));
     drawString(xPos1 + 8, yTick + 4, dataStr, LEFT);
     display.setFont(&FONT_5pt8b);
-    drawString(display.getCursorX(), yTick + 4, "%", LEFT);
+    drawString(display.getCursorX(), yTick + 4, "", LEFT);
 
     // draw dotted line
     if (i < yMajorTicks)
@@ -935,9 +935,9 @@ void drawOutlookGraph(owm_hourly_t *const hourly, tm timeInfo)
     // PoP
     x0_t = static_cast<int>(round( xPos0 + 1 + (i * xInterval)));
     x1_t = static_cast<int>(round( xPos0 + 1 + ((i + 1) * xInterval) ));
-    yPxPerUnit = (yPos1 - yPos0) / 100.0;
+    yPxPerUnit = (yPos1 - yPos0) / 2.5 ;
     y0_t = static_cast<int>(round(
-                            yPos1 - (yPxPerUnit * (hourly[i    ].pop * 100)) ));
+                            yPos1 - (yPxPerUnit * (hourly[i    ].rain_1h )) ));
     y1_t = yPos1;
 
     // graph PoP
