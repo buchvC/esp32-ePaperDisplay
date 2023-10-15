@@ -69,7 +69,7 @@ const String CITY_STRING = "New York";
 // TIME
 // For list of time zones see
 // https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv
-const char *TIMEZONE = "EST5EDT,M3.2.0,M11.1.0";
+const char *TIMEZONE = "CET-1CEST,M3.5.0,M10.5.0/3";
 // Time format used when displaying sunrise/set times. (Max 11 characters)
 // For more information about formatting see
 // https://man7.org/linux/man-pages/man3/strftime.3.html
@@ -115,9 +115,9 @@ const int HOURLY_GRAPH_MAX = 24;
 // minutes). Once the battery voltage has fallen to CRIT_LOW_BATTERY_VOLTAGE,
 // the esp32 will hibernate and a manual press of the reset (RST) button to
 // begin operating again.
-const float BATTERY_WARN_VOLTAGE     = 3.40; // (volts) ~ 10%
-const float LOW_BATTERY_VOLTAGE      = 3.20; // (volts)
-const float VERY_LOW_BATTERY_VOLTAGE = 3.10; // (volts)
+const float BATTERY_WARN_VOLTAGE     = 3.02; // (volts) ~ 10%
+const float LOW_BATTERY_VOLTAGE      = 3.01; // (volts)
+const float VERY_LOW_BATTERY_VOLTAGE = 3.01; // (volts)
 const float CRIT_LOW_BATTERY_VOLTAGE = 3.00; // (volts)
 const unsigned long LOW_BATTERY_SLEEP_INTERVAL      = 30;  // (minutes)
 const unsigned long VERY_LOW_BATTERY_SLEEP_INTERVAL = 120; // (minutes)
